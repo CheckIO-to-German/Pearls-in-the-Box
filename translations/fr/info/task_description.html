@@ -1,0 +1,73 @@
+<p>
+  Pendant que Stephen <a href="http://www.checkio.org/mission/express-delivery/share/de89191e897234cfb3468291385963d9/">pilote
+    un cargo</a>, Nicola et Sophia ont inventé un nouveau jeu avec les boîtes.
+
+</p>
+
+<p>
+    Pour commencer le jeu, ils placent plusieurs perles noires et blanches dans l'une des boîtes.
+    Chaque robot peut jouer  <strong>N</strong> coups, à la suite de quoi on retourne à la configuration initiale
+    pour le joueur suivant.
+    À chaque coup, le robot prend une perle dans la boîte, et replace un perle de la couleur contraire dans la boîte.
+    Le gagnant est celui qui tire la perle blanche au  <strong>Nième</strong> coup (ou +1 point s'ils font plusieurs parties).
+</p>
+
+<p>
+    Nos robots n'aiment pas l'indétermination, et veulent connaître la probabilité d'avoir une perle blanche au Nième coup. 
+    La probabilité est une valeur entre 0 (0% de chances si l'événement n'arrivera pas) et 1 
+    (100% de chances si l'événement arrivera à coup sûr).
+    Le résultat est un <em>float</em> entre 0 et 1 avec une précision de deux chiffres après la virgule (&plusmn;0.01).
+</p>
+
+<p>
+    On vous donne un ensemble initial de perles sous la forme d'une chaîne de caractères constituée de "b" (black = noir) et 
+    de "w" (white = blanc), et le nombre de coups (N).
+    L'ordre des perles n'a pas d'importance.
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="probability" src="{{MEDIA}}probability.png" alt="probability" width="600px"/>
+    <img class="for_editor_only" title="probability" src="{{MEDIA}}probability.png" alt="probability" width="380px"/>
+</p>
+
+<p>
+    <strong>Input: </strong> La distribution initiale de perles, comme chaîne de caractères, et le nombre de coups (int).
+</p>
+
+<p>
+    <strong>Output: </strong> La probabilité d'obtenir une perle blanche (float).
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemple:</strong>
+    </p>
+    <pre class="brush: python">
+checkio('bbw', 3) == 0.48
+checkio('wwb', 3) == 0.52
+checkio('www', 3) == 0.56
+checkio('bbbb', 1) == 0
+checkio('wwbb', 4) == 0.5
+checkio('bwbwbwb', 5) == 0.48
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Application: </strong>
+    Cette mission vous fait manipuler des probabilités élémentaires.
+    Amusant : indépendamment du contenu initial de la boîte, lorsque le nombre de coups augmente, 
+    la probabilité approche 0.5 !
+</p>
+
+
+<p>
+    <strong>Préconditions:</strong>
+    0 < N &le; 20<br>
+    0 < |pearls| &le; 20<br>
+</p>
+
+<p class="for_info_only">
+    <strong>Comment utiliser TryIt: </strong><br>
+    <iframe width="640" height="360" src="//www.youtube.com/embed/wVb7VoMzByo" frameborder="0" allowfullscreen></iframe>
+</p>
