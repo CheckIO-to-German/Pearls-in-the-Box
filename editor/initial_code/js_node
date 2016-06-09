@@ -1,0 +1,16 @@
+"use strict";
+function checkio(marbles, step) {
+    return 0.5
+}
+
+var assert = require('assert');
+
+if (!global.is_checking) {
+    assert.equal(checkio('bbw', 3), 0.48, "First");
+    assert.equal(checkio('wwb', 3), 0.52, "Second");
+    assert.equal(checkio('www', 3), 0.56, "Third");
+    assert.equal(checkio('bbbb', 1), 0, "Fifth");
+    assert.equal(checkio('wwbb', 4), 0.5, "Sixth");
+    assert.equal(checkio('bwbwbwb', 5), 0.48, "Seventh");
+    console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
+}
