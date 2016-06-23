@@ -18,8 +18,7 @@
 </p>
 
 <p style="text-align: center;">
-    <img class="for_info_only" title="probability" src="{{MEDIA}}probability.png" alt="probability" width="600px"/>
-    <img class="for_editor_only" title="probability" src="{{MEDIA}}probability.png" alt="probability" width="380px"/>
+    <img class="for_info_only" title="probability" src="{{MEDIA}}probability.png" alt="probability" style="max-height:600px"/>
 </p>
 
 <p>
@@ -35,14 +34,21 @@
     <p>
         <strong>Example:</strong>
     </p>
-    <pre class="brush: python">
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+boxProbability('bbw', 3) == 0.48
+boxProbability('wwb', 3) == 0.52
+boxProbability('www', 3) == 0.56
+boxProbability('bbbb', 1) == 0
+boxProbability('wwbb', 4) == 0.5
+boxProbability('bwbwbwb', 5) == 0.48
+{% else %}
 checkio('bbw', 3) == 0.48
 checkio('wwb', 3) == 0.52
 checkio('www', 3) == 0.56
 checkio('bbbb', 1) == 0
 checkio('wwbb', 4) == 0.5
 checkio('bwbwbwb', 5) == 0.48
-</pre>
+{% endif %}</pre>
 </div>
 
 <p class="for_info_only">
