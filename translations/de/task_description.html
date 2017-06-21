@@ -1,0 +1,73 @@
+<div style="text-align: center">
+    <img src="{{MEDIA}}title.png" style="max-height: 350px">
+</div>
+<p>
+    To start the game, they put several black and white pearls in one of the boxes.
+    Each robots have <strong>Nth</strong> moves, then initial set are restored for a next player.
+    For each move, the robot take a pearl out of the box and put one of the opposite color back.
+    The winner is the one who pulls the white pearl on the <strong>Nth</strong> step (or +1 point if they play many parties).
+</p>
+
+<p>
+    Our robots don't like indeterminacy and want to know the probability of a white pearl on the Nth step.
+    The probability is a value between 0 (0% chance or will not happen) and 1 (100% chance or will happen).
+    The result is a float from 0 to 1 with two digits precision (&plusmn;0.01).
+</p>
+
+<p>
+    You are given a start set of pearls as a string that contains "b" (black) and "w" (white) and the number of the step
+    (N).
+    The order of the pearls does not matter.
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="probability" src="{{MEDIA}}probability.png" alt="probability" style="max-height:600px"/>
+</p>
+
+<p>
+    <strong>Input: </strong> The start sequence of the pearls as a string and the step number as an integer.
+</p>
+
+<p>
+    <strong>Output: </strong> The probability for a white pearl as a float.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+boxProbability('bbw', 3) == 0.48
+boxProbability('wwb', 3) == 0.52
+boxProbability('www', 3) == 0.56
+boxProbability('bbbb', 1) == 0
+boxProbability('wwbb', 4) == 0.5
+boxProbability('bwbwbwb', 5) == 0.48
+{% else %}
+checkio('bbw', 3) == 0.48
+checkio('wwb', 3) == 0.52
+checkio('www', 3) == 0.56
+checkio('bbbb', 1) == 0
+checkio('wwbb', 4) == 0.5
+checkio('bwbwbwb', 5) == 0.48
+{% endif %}</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    This task introduces you to the basics of probability theory and statistics.
+    Fun fact: regardless of the initial state, as the number of steps increases, the probability approaches 0.5!
+</p>
+
+
+<p>
+    <strong>Precondition:</strong>
+    0 < N &le; 20<br>
+    0 < |pearls| &le; 20<br>
+</p>
+
+<p class="for_info_only">
+    <strong>How to use TryIt: </strong><br>
+    <iframe width="640" height="360" src="//www.youtube.com/embed/wVb7VoMzByo" frameborder="0" allowfullscreen></iframe>
+</p>
