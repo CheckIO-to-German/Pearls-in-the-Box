@@ -1,0 +1,80 @@
+<div style="text-align: center">
+  <img src="{{MEDIA}}title.png" style="max-height: 350px">
+</div>
+<p>
+  Zu Beginn eines Spiels wird ein Satz aus schwarzen und/oder weißen Kugeln in eine Box gelegt.
+  Anschließend zieht der erste Roboter N-mal, wobei er nach jedem Zug eine Kugel der
+  entgegengesetzten Farbe zurück in die Box legt.<br>
+  Hat der Roboter alle seine Züge gemacht, wird der anfängliche Satz aus weißen und/oder
+  schwarzen Kugeln wieder hergestellt und in die Box gelegt, bevor der nächste Roboter dran ist.<br>
+  Gewinner ist jener, der genau im N-ten Zug eine weiße Perle zieht.
+</p>
+
+<p>
+  Unsere Roboter mögen keine Ungewissheit und wollen die Wahrscheinlichkeit bestimmen,
+  mit der sie eine weiße Perle im N-ten Zug ziehen können.<br>
+  Die Wahrscheinlichkeit ist ein Wert zwischen 0 (0&nbsp;% Chance bzw. unmöglich)
+  und 1 (100&nbsp;% Chance bzw. sicher).<br>
+  Das Ergebnis soll eine Gleitkommazahl von 0 bis 1 mit zwei Ziffern Präzision (&plusmn;0.01) sein.
+</p>
+
+<p>
+  Gegeben ist der anfängliche Satz von Perlen als String, der die Buchstaben "b" (schwarz)
+  und "w" (weiß) enthält und die Anzahl der Züge (N).<br>
+  Die Reihenfolge der Perlen spielt keine Rolle.
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="probability" src="{{MEDIA}}probability.png" alt="probability" style="max-height:600px"/>
+</p>
+
+<p>
+  <strong>Eingabe:</strong> Die Anfangsfolge der Perlen als String und die Anzahl an
+  Zügen als Ganzzahl (int).
+</p>
+
+<p>
+  <strong>Ausgabe:</strong> Die Wahrscheinlichkeit für das Ziehen einer weißen Perle im
+  N-ten Zug als Gleitkommazahl (float).
+</p>
+
+<div class="for_info_only">
+  <p>
+    <strong>Beispiele:</strong>
+  </p>
+  <pre class="brush: python">{% if interpreter.slug == "js-node" %}
+boxProbability('bbw', 3) == 0.48
+boxProbability('wwb', 3) == 0.52
+boxProbability('www', 3) == 0.56
+boxProbability('bbbb', 1) == 0
+boxProbability('wwbb', 4) == 0.5
+boxProbability('bwbwbwb', 5) == 0.48
+{% else %}
+checkio('bbw', 3) == 0.48
+checkio('wwb', 3) == 0.52
+checkio('www', 3) == 0.56
+checkio('bbbb', 1) == 0
+checkio('wwbb', 4) == 0.5
+checkio('bwbwbwb', 5) == 0.48
+{% endif %}</pre>
+</div>
+
+<p class="for_info_only">
+  <strong>Wozu das gut ist:</strong><br>
+  In dieser Mission musst Du Dich mit den Grundlagen der Wahrscheinlichkeitsrechnung und
+  Statistik beschäftigen.<br>
+  Ein interessanter Fakt:<br>
+  Unabhängig vom anfänglichen Satz Perlen, nähert sich die Wahrscheinlichkeit einem Wert
+  von 0,5, wenn die Anzahl an Zügen erhöht wird!
+</p>
+
+<p>
+  <strong>Bedingungen:</strong><br>
+  0 < N &le; 20<br>
+  0 < |pearls| &le; 20<br>
+</p>
+
+<p class="for_info_only">
+  <strong>So funktioniert TryIt:</strong><br>
+  <iframe width="640" height="360" src="//www.youtube.com/embed/wVb7VoMzByo" frameborder="0" allowfullscreen></iframe>
+</p>
